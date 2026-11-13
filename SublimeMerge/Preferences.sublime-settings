@@ -4,7 +4,7 @@
     "hardware_acceleration": "opengl",
     "remember_workspace": false,
     "side_bar_layout": "columns",
-    "theme": "auto",
+    "theme": "eb.sublime-theme",
     "themed_title_bar": false,
     "time_format": "system",
     "translate_tabs_to_spaces": true,

@@ -1,0 +1,12 @@
+{
+  "extends": "Default Dark.sublime-theme",
+  "variables": {
+    "font_face": "Cascadia Code NF SemiLight",
+    "font_size_sm": 12,
+    "font_size": 13,
+    "font_size_lg": 14,
+    "font_size_title": 26,
+  },
+  "rules": [
+  ]
+}
