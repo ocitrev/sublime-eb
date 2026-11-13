@@ -1,0 +1,9 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+

@@ -1,0 +1,19 @@
+{
+  "cmd": "python -u $file",
+  "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+  "selector": "source.python",
+  "variants": [
+    {
+      "name": "Syntax Check",
+      "cmd": "python -m py_compile $file"
+    },
+    {
+      "name": "Run",
+      "cmd": [
+        "python",
+        "-u",
+        "$file"
+      ]
+    }
+  ]
+}

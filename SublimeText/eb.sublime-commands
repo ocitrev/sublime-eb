@@ -1,0 +1,48 @@
+[
+    {
+        "caption": "Show Unsaved Changes...",
+        "command": "diff_changes"
+    },
+    {
+        "caption": "Invert Selection",
+        "command": "invert_selection"
+    },
+    {
+        "caption": "Spelling: Spell Check",
+        "command": "toggle_setting",
+        "args": {
+            "setting": "spell_check"
+        }
+    },
+    {
+        "caption": "Set dictionary: fr_FR",
+        "command": "set_setting",
+        "args": {
+            "setting": "dictionary",
+            "value": "Packages/Language - French - Français/fr_FR.dic"
+        }
+    },
+    {
+        "caption": "Set dictionary: en_US",
+        "command": "set_setting",
+        "args": {
+            "setting": "dictionary",
+            "value": "Packages/Language - English/en_US.dic"
+        }
+    },
+    {
+        "caption": "Format JSON",
+        "command": "format_json"
+    },
+    {
+        "caption": "Clang Format: File",
+        "command": "clang_format",
+        "args": {
+            "whole_buffer": true
+        }
+    },
+    {
+        "caption": "Reveal in Side Bar",
+        "command": "reveal_in_side_bar",
+    }
+]

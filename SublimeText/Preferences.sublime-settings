@@ -1,0 +1,42 @@
+﻿{
+	"always_show_minimap_viewport": true,
+	"atomic_save": false,
+	"caret_style": "smooth",
+	"color_scheme": "Packages/SublimeEB/Visual Studio Dark.sublime-color-scheme",
+	"copy_with_empty_selection": false,
+	"dictionary": [
+		"Packages/Language - English/en_US.dic",
+		"Packages/Language - French - Français/fr_FR.dic"
+	],
+	"draw_minimap_border": false,
+	"draw_white_space": ["selection", "trailing", "isolated", "leading_mixed"],
+	"enable_hexadecimal_encoding": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fold_buttons": false,
+	"font_face": "Cascadia Code NF Light",
+	"font_options":
+	[
+		"subpixel_antialias",
+		"zero",
+		"ss01",
+		"ss19",
+		"onum",
+	],
+	"font_size": 11,
+	"default_font_size": 11,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"relative_line_numbers": false,
+	"remember_workspace": false,
+	"rulers":
+	[
+		120
+	],
+	"scroll_past_end": false,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"theme": "Default Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+}
+

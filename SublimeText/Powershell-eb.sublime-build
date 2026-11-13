@@ -1,0 +1,40 @@
+{
+  "cmd": [
+    "pwsh.exe",
+    "-noprofile",
+    "-file",
+    "$file"
+  ],
+  "selector": "source.powershell",
+  "variants": [
+    {
+      "name": "32-bit",
+      "shell": true,
+      "cmd": [
+        "pwsh.exe",
+        "-noprofile",
+        "-nologo",
+        "-file",
+        "$file"
+      ]
+    },
+    {
+      "name": "Run",
+      "shell": true,
+      "quiet": false,
+      "encoding": "utf-8",
+      "cancel": {"kill": true},
+      "working_dir": "$file_path",
+      "env": {
+        "TERM": "dumb"
+      },
+      "cmd": [
+        "pwsh.exe",
+        "-nop",
+        "-noni",
+        "-f",
+        "$file"
+      ]
+    }
+  ]
+}

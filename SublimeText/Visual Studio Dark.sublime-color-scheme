@@ -1,0 +1,327 @@
+{
+    "name": "Visual Studio Dark",
+    "author": "Niklas Mollenhauer",
+    "variables":
+    {
+        "background": " hsl(0, 0%, 12%)",
+        "xml-attribute": "#92caf4",
+        "js-operator": "#687687",
+        "css-attribute": "#9cdcfe",
+        "comment": "hsl(102, 28%, 43%)",
+        "constant": "hsl(295, 46%, 58%)",
+        "css_selector": "#d7ba7d",
+        "embeded-bg": "#282828",
+        "foreground": "hsl(0, 0%, 86%)",
+        "invalid": "hsl(0, 100%, 60%)",
+        "keyword": "hsl(207, 61%, 59%)",
+        "line_highlight": "color(var(background) blend(black 60%)",
+        "linebreak-bg": "color(#a57706 a(40%))",
+        "number": "hsl(99, 28%, 73%)",
+        "operator": "hsl(0, 0%, 61%)",
+        "parameter": "hsl(0, 0%, 50%)",
+        "property-value": "hsl(0, 0%, 78%)",
+        "selection": "hsl(210, 52%, 31%)",
+        "string": "hsl(18, 50%, 68%)",
+        "string-verbatim": "hsl(17, 50%, 78%)",
+        "type": "hsl(168, 53%, 55%)",
+        "underline": "hsl(96, 39%, 74%)",
+        "visible_white_space": "hsl(190, 60%, 40%)",
+        "white": "hsl(0, 0%, 100%)",
+        "xml-declaraion": "hsl(60, 7%, 38%)",
+    },
+
+    "globals":
+    {
+        "foreground": "var(foreground)",
+        "background": "var(background)",
+        "caret": "var(white)",
+        "invisibles": "var(visible_white_space)",
+        "line_highlight": "var(line_highlight)",
+        "selection": "var(selection)"
+    },
+    "rules":
+    [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "var(comment)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Variable",
+            "scope": "variable",
+            "foreground": "var(foreground)"
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Operator",
+            "scope": "keyword.operator",
+            "foreground": "var(operator)"
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "var(number)"
+        },
+        {
+            "name": "User-defined constant",
+            "scope": "constant",
+            "foreground": "var(constant)"
+        },
+        {
+            "name": "Built-in constant",
+            "scope": "constant.language",
+            "foreground": "var(constant)"
+        },
+        {
+            "name": "Boolean",
+            "scope": "constant.language.boolean",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "var(string)"
+        },
+        {
+            "name": "String interpolation",
+            "scope": "constant.character.escape, string source",
+            "foreground": "var(string-verbatim)"
+        },
+        {
+            "name": "Preprocessor line",
+            "scope": "meta.preprocessor",
+            "foreground": "var(operator)"
+        },
+        {
+            "name": "Preprocessor directive",
+            "scope": "keyword.control.import",
+            "foreground": "var(operator)"
+        },
+        {
+            "name": "Function name",
+            "scope": "entity.name.function, keyword.other.name-of-parameter.objc",
+            "foreground": "var(foreground)"
+        },
+        {
+            "name": "Class name",
+            "scope": "entity.name.type",
+            "foreground": "var(type)"
+        },
+        {
+            "name": "Type name",
+            "scope": "storage.type",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Type modifier",
+            "scope": "storage.modifier",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Inherited class name",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(type)"
+        },
+        {
+            "name": "Function parameter",
+            "scope": "variable.parameter",
+            "foreground": "var(parameter)"
+        },
+        {
+            "name": "Function argument and result types",
+            "scope": "storage.type.method",
+            "foreground": "var(parameter)"
+        },
+        {
+            "name": "Section",
+            "scope": "meta.section entity.name.section, declaration.section entity.name.section"
+        },
+        {
+            "name": "Library function",
+            "scope": "support.function",
+            "foreground": "var(white)"
+        },
+        {
+            "name": "Library object",
+            "scope": "support.class, support.type",
+            "foreground": "var(white)"
+        },
+        {
+            "name": "Library constant",
+            "scope": "support.constant",
+            "foreground": "var(number)"
+        },
+        {
+            "name": "Library variable",
+            "scope": "support.variable",
+            "foreground": "var(white)"
+        },
+        {
+            "name": "JS: Operator",
+            "scope": "keyword.operator.js",
+            "foreground": "var(js-operator)"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid",
+            "foreground": "var(invalid)"
+        },
+        {
+            "name": "Invalid trailing whitespace",
+            "scope": "invalid.deprecated.trailing-whitespace",
+            "background": "var(invalid)"
+        },
+        {
+            "name": "Embedded source",
+            "scope": "text source, string.unquoted",
+            "background": "var(embeded-bg)"
+        },
+        {
+            "name": "Markup XML declaration",
+            "scope": "meta.xml-processing, declaration.xml-processing",
+            "foreground": "var(xml-declaraion)"
+        },
+        {
+            "name": "Markup DOCTYPE",
+            "scope": "meta.doctype, declaration.doctype",
+            "foreground": "var(parameter)"
+        },
+        {
+            "name": "Markup DTD",
+            "scope": "meta.doctype.DTD, declaration.doctype.DTD"
+        },
+        {
+            "name": "Markup tag",
+            "scope": "meta.tag, declaration.tag",
+            "foreground": "var(parameter)"
+        },
+        {
+            "name": "Markup name of tag",
+            "scope": "entity.name.tag",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Markup tag attribute",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(xml-attribute)"
+        },
+        {
+            "name": "Markup: Attribute Value",
+            "scope": "string.quoted.double.xml, string.quoted.double.html",
+            "foreground": "var(property-value)"
+        },
+        {
+            "name": "Markup: Heading",
+            "scope": "markup.heading",
+            "foreground": "var(white)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup: Quote",
+            "scope": "markup.quote",
+            "foreground": "var(foreground)"
+        },
+        {
+            "name": "Markup: List",
+            "scope": "markup.list",
+            "foreground": "var(foreground)"
+        },
+        {
+            "name": "\u00a7 css tag-name",
+            "scope": "meta.selector.css entity.name.tag",
+            "foreground": "var(css_selector)"
+        },
+        {
+            "name": "\u00a7 css:pseudo-class",
+            "scope": "meta.selector.css entity.other.attribute-name.tag.pseudo-class",
+            "foreground": "var(css_selector)"
+        },
+        {
+            "name": "\u00a7 css#id",
+            "scope": "meta.selector.css entity.other.attribute-name.id",
+            "foreground": "var(css_selector)"
+        },
+        {
+            "name": "\u00a7 css.class",
+            "scope": "meta.selector.css entity.other.attribute-name.class",
+            "foreground": "var(css_selector)"
+        },
+        {
+            "name": "\u00a7 css property-name:",
+            "scope": "support.type.property-name.css",
+            "foreground": "var(css-attribute)"
+        },
+        {
+            "name": "\u00a7 css property-value;",
+            "scope": "meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css",
+            "foreground": "var(property-value)"
+        },
+        {
+            "name": "\u00a7 css @at-rule",
+            "scope": "meta.preprocessor.at-rule keyword.control.at-rule",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Markdown: Linebreak",
+            "scope": "meta.hard-line-break.markdown",
+            "foreground": "var(foreground)",
+            "background": "var(linebreak-bg)"
+        },
+        {
+            "name": "Markdown: Raw",
+            "scope": "text.html.markdown markup.raw.inline",
+            "foreground": "var(type)"
+        },
+        {
+            "name": "Markdown: Punctuation for Inline Block",
+            "scope": "punctuation.definition.raw.markdown",
+            "foreground": "var(type)"
+        },
+        {
+            "name": "Markup: Heading",
+            "scope": "markup.heading",
+            "foreground": "var(foreground)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup: Italic",
+            "scope": "markup.italic",
+            "foreground": "var(foreground)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup: Bold",
+            "scope": "markup.bold",
+            "foreground": "var(white)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markdown: Punctuation for Bold, Italic",
+            "scope": "punctuation.definition.bold.markdown, punctuation.definition.italic.markdown",
+            "foreground": "var(parameter)"
+        },
+        {
+            "name": "Markup: Underline",
+            "scope": "markup.underline",
+            "foreground": "var(underline)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markup: Quote",
+            "scope": "markup.quote",
+            "foreground": "var(keyword)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup: Separator",
+            "scope": "meta.separator",
+            "foreground": "var(parameter)",
+            "font_style": "bold"
+        }
+    ]
+}
