@@ -1,8 +1,8 @@
 # sublime-eb
 
-Mes préfrénces et outils pour Sublime Text et Sublime Merge
+Mes préférences et outils pour Sublime Text et Sublime Merge
 
-## Install for development
+## Install
 
 ```pwsh
 $packages = Join-Path $env:APPDATA 'Sublime Text\Packages'
