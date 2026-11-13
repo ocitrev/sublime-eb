@@ -1,0 +1,4 @@
+root = true
+
+[*.sublime-*]
+end_of_line = lf
