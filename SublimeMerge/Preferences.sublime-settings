@@ -1,0 +1,13 @@
+{
+    "font_face": "Cascadia Code PL SemiLight",
+    "font_size": 11,
+    "hardware_acceleration": "opengl",
+    "remember_workspace": false,
+    "side_bar_layout": "columns",
+    "theme": "auto",
+    "themed_title_bar": false,
+    "time_format": "system",
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "git_binary": "system",
+}
