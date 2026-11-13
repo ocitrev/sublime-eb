@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+az account get-access-token --resource '499b84ac-1321-427f-aa17-267ca6975798' --query accessToken -o tsv
+]]></content>
+  <tabTrigger>az-access-token</tabTrigger>
+  <scope>source.powershell</scope>
+  <description>az account get-access-token</description>
+</snippet>
+
