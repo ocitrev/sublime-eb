@@ -1,4 +1,4 @@
 {
 	"binary": "clang-format.exe",
-	"style": "file"
+	"style": "File",
 }

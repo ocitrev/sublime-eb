@@ -26,6 +26,9 @@
     { "keys": ["alt+up"], "command": "swap_line_up" },
     { "keys": ["alt+down"], "command": "swap_line_down" },
 
+    { "keys": ["ctrl+k", "ctrl+o"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
+    { "keys": ["alt+o"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
+
     // side bar
     { "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
 
@@ -61,6 +64,39 @@
         "args": { "action": "matching_pair" },
         "command": "run_emmet_action",
         "context": [ { "key": "emmet_action_enabled.matching_pair" } ]
-    }
+    },
 
+    // next/previous clangd issue (errors and warnings; cspell reports at "Information")
+    {
+        "keys": ["f8"],
+        "command": "lsp_next_diagnostic",
+        "args": {"severity_level": 2},
+        "context": [{"key": "setting.lsp_active"}]
+    },
+    {
+        "keys": ["shift+f8"],
+        "command": "lsp_prev_diagnostic",
+        "args": {"severity_level": 2},
+        "context": [{"key": "setting.lsp_active"}]
+    },
+
+    // go to definition with the LSP (clangd); without a server, F12 stays Sublime's goto_definition, and
+    // "fallback" runs goto_definition when the server finds nothing
+    {
+        "keys": ["f12"],
+        "command": "lsp_symbol_definition",
+        "args": {"side_by_side": false, "force_group": true, "fallback": true, "group": -1},
+        "context": [
+            {"key": "lsp.session_with_capability", "operand": "definitionProvider"},
+            {"key": "auto_complete_visible", "operand": false}
+        ]
+    },
+
+    // find references with the LSP; LSP binds it already, this adds the fallback to Sublime's goto_reference
+    {
+        "keys": ["shift+f12"],
+        "command": "lsp_symbol_references",
+        "args": {"side_by_side": false, "force_group": true, "fallback": true, "group": -1, "include_declaration": false},
+        "context": [{"key": "lsp.session_with_capability", "operand": "referencesProvider"}]
+    },
 ]

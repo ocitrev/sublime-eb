@@ -8,6 +8,9 @@
 		"proj",
 		"exe.config",
 		"dll.config",
-		"vssettings"
+		"vssettings",
+		"packages.config",
+		"app.config",
+		"nuget.config"
 	]
 }
