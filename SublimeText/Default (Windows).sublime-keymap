@@ -85,10 +85,21 @@
     {
         "keys": ["f12"],
         "command": "lsp_symbol_definition",
-        "args": {"side_by_side": false, "force_group": true, "fallback": true, "group": -1},
+        "args": {
+            "side_by_side": false,
+            "force_group": true,
+            "fallback": true,
+            "group": -1,
+        },
         "context": [
-            {"key": "lsp.session_with_capability", "operand": "definitionProvider"},
-            {"key": "auto_complete_visible", "operand": false}
+            {
+                "key": "lsp.session_with_capability",
+                "operand": "definitionProvider",
+            },
+            {
+                "key": "auto_complete_visible",
+                "operand": false,
+            }
         ]
     },
 
@@ -96,7 +107,29 @@
     {
         "keys": ["shift+f12"],
         "command": "lsp_symbol_references",
-        "args": {"side_by_side": false, "force_group": true, "fallback": true, "group": -1, "include_declaration": false},
-        "context": [{"key": "lsp.session_with_capability", "operand": "referencesProvider"}]
+        "args": {
+            "side_by_side": false,
+            "force_group": true,
+            "fallback": true,
+            "group": -1,
+            "include_declaration": false,
+        },
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operand": "referencesProvider",
+            }
+        ]
+    },
+
+    // Use LSP for goto symbol in project
+    {
+        "keys": ["ctrl+shift+r"],
+        "command": "lsp_workspace_symbols",
+        "context": [{
+            "key": "lsp.session_with_capability",
+            "operator": "equal",
+            "operand": "workspaceSymbolProvider",
+        }]
     },
 ]
